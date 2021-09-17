@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "@wdio/allure-reporter": "^7.9.1",
+    "@wdio/cli": "^7.9.1",
+    "allure-commandline": "^2.13.8",
+    "wdio-image-comparison-service": "^2.3.0"
+  },
+  "devDependencies": {
+    "@wdio/local-runner": "^7.9.1",
+    "@wdio/mocha-framework": "^7.9.1",
+    "@wdio/spec-reporter": "^7.9.0",
+    "chromedriver": "^92.0.1",
+    "wdio-chromedriver-service": "^7.2.0"
+  },
+  "scripts": {
+    "test": "npx wdio run wdio.conf.js",
+    "report:generate": "npx allure generate --clean ./test-report/allure-result/ -o ./test-report/allure-report",
+    "report:open": "npx allure open test-report/allure-report"
+  }
+}
